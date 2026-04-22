@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg:      #ffffff;
+    --surface: #200c1d;
+    --border:  #1a2640;
+    --accent:  #00d06f;
+    --cyan:    #37c4e1;
+    --muted:   #4a6080;
+    --text:    #000000;
+    --text-dim:#343434;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--bg);
+    /* Subtle dot-grid texture */
+    background-image: radial-gradient(circle, rgba(0, 212, 255, 0.06) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+}
+
+@layer components {
+  /* Panel / Card */
+  .panel {
+    @apply bg-surface border border-border rounded-xl p-6;
+  }
+
+  /* Input */
+  .psas-input {
+    @apply w-full bg-bg border border-border rounded-lg px-4 py-3 font-mono text-sm
+           text-[var(--text)] placeholder-[var(--text-dim)]
+           focus:outline-none;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply bg-accent text-bg font-ui font-bold px-6 py-2.5 rounded-lg
+           hover:bg-opacity-90 active:scale-95
+           transition-all duration-150 select-none;
+  }
+
+  .btn-ghost {
+    @apply border border-border text-[var(--text-dim)] font-ui px-6 py-2.5 rounded-lg
+           hover:border-accent hover:text-accent
+           transition-all duration-150 select-none;
+  }
+
+  /* Label above an input */
+  .field-label {
+    @apply text-xs font-mono uppercase tracking-widest text-[var(--text-dim)] mb-2 block;
+  }
+
+  /* Accent badge */
+  .badge {
+    @apply inline-flex items-center gap-1.5 text-xs font-mono px-2.5 py-1 rounded-full
+           border border-border bg-dim;
+  }
+
+  /* Section heading */
+  .section-title {
+    @apply font-ui font-bold text-lg text-[var(--text)] mb-1;
+  }
+
+  /* Subtle separator */
+  .divider {
+    @apply border-t border-border my-6;
+  }
+}
