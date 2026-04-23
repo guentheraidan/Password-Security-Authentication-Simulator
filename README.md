@@ -4,12 +4,13 @@ The Password Security & Authentication Simulator (PSAS) is an educational, brows
 
 ## Modules
 
-| Module | Route | Description |
-|---|---|---|
-| Password Strength Analyzer | `/password-strength` | Evaluates entropy, character diversity, and common-pattern weaknesses via [zxcvbn](https://github.com/dropbox/zxcvbn) |
-| Brute-Force Attack Simulator | `/brute-force` | Mathematical crack-time estimates across real attack speeds with an animated Web Worker counter |
-| Hashing Algorithm Comparison | `/hashing` | Side-by-side MD5, SHA-1, SHA-256, bcrypt, and Argon2id outputs with salts, compute times, and security ratings |
-| MFA / TOTP Simulator | `/mfa` | Full TOTP flow including QR enrollment, live token generation, and token verification via [otpauth](https://www.npmjs.com/package/otpauth) |
+| Module | Route | Description | Image |
+|---|---|---|---|
+| Password Strength Analyzer | `/password-strength` | Evaluates entropy, character diversity, and common-pattern weaknesses via [zxcvbn](https://github.com/dropbox/zxcvbn) | <img width="1041" height="836" alt="image" src="https://github.com/user-attachments/assets/7f51a0ed-d108-4067-97ac-98d240dac231" /> |
+| Brute-Force Attack Simulator | `/brute-force` | Mathematical crack-time estimates across real attack speeds with an animated Web Worker counter | <img width="1041" height="836" alt="image" src="https://github.com/user-attachments/assets/acc4ab76-bdd1-4fa6-8355-06f220e71bb4" /> |
+| Hashing Algorithm Comparison | `/hashing` | Side-by-side MD5, SHA-1, SHA-256, bcrypt, and Argon2id outputs with salts, compute times, and security ratings | <img width="300" alt="image" src="https://github.com/user-attachments/assets/dd0ba717-8730-403a-90e3-e444bdf46e89" /> |
+| MFA / TOTP Simulator | `/mfa` | Full TOTP flow including QR enrollment, live token generation, and token verification via [otpauth](https://www.npmjs.com/package/otpauth) | <img width="788" height="836" alt="image" src="https://github.com/user-attachments/assets/b06b5d54-eb41-4789-a428-68c51ffc8b4f" /> |
+
 
 ## Tech Stack
 
