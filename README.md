@@ -1,15 +1,15 @@
-# PSAS — Password Security & Authentication Simulator
+# PSAS - Password Security & Authentication Simulator
 
-An educational, browser-based web application for exploring modern password security and authentication techniques. All computation runs client-side — no data ever leaves your browser.
+The Password Security & Authentication Simulator (PSAS) is an educational, browser-based web application used to explore modern password security and authentication techniques. All computation runs client-side, so no data ever leaves your browser.
 
 ## Modules
 
 | Module | Route | Description |
 |---|---|---|
-| Password Strength Analyzer | `/password-strength` | Evaluates entropy, character diversity, and common-pattern weaknesses via zxcvbn |
+| Password Strength Analyzer | `/password-strength` | Evaluates entropy, character diversity, and common-pattern weaknesses via [zxcvbn](https://github.com/dropbox/zxcvbn) |
 | Brute-Force Attack Simulator | `/brute-force` | Mathematical crack-time estimates across real attack speeds with an animated Web Worker counter |
-| Hashing Algorithm Comparison | `/hashing` | Side-by-side MD5, SHA-1, bcrypt, and Argon2id outputs with compute times and security ratings |
-| MFA / TOTP Simulator | `/mfa` | Full TOTP flow — QR enrollment, live token generation, and token verification via otpauth |
+| Hashing Algorithm Comparison | `/hashing` | Side-by-side MD5, SHA-1, SHA-256, bcrypt, and Argon2id outputs with salts, compute times, and security ratings |
+| MFA / TOTP Simulator | `/mfa` | Full TOTP flow including QR enrollment, live token generation, and token verification via [otpauth](https://www.npmjs.com/package/otpauth) |
 
 ## Tech Stack
 
@@ -62,18 +62,11 @@ src/
 
 ## Design Constraints
 
-- Client-side only — no backend, no network calls after page load
+- Client-side only; no backend, no network calls after page load
 - No passwords or tokens are stored or transmitted
 - WCAG 2.1 Level AA accessible
-- Deployable to GitHub Pages or Netlify as a static site
 - All dependencies are MIT or Apache 2.0 licensed
-
-## Deployment (GitHub Pages)
-
-1. In `vite.config.js`, set `base: '/your-repo-name/'`
-2. Run `npm run build`
-3. Push the `dist/` folder to the `gh-pages` branch, or use the [gh-pages](https://www.npmjs.com/package/gh-pages) package
 
 ## Authors
 
-Abel Manoj, Nathan Jones, Daniel Vargas, Aidan Guenther — Group 7
+Aidan Guenther, Nathan Jones, Abel Manoj, and Daniel Vargas
